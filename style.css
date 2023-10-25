@@ -1,0 +1,850 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+/*ERIK DIAS DE SOUZA
+RU: 414884*/
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@200&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+body {
+    background-color:#000;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/*HEADER*/
+/*ERIK DIAS DE SOUZA
+RU: 414884*/
+header {
+    background-color: #000;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header h1 {
+    color: #0dcaec;
+    font-size: 3rem;
+}
+
+header span {
+    color: #ffffff;
+}
+
+header .navegacao-primaria {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+header .navegacao-primaria li a {
+    color: #fff;
+    width: 0px;
+    height: 0px;
+    font-size: 1.3rem;
+}
+
+header .navegacao-primaria li a::after {
+    content:'';
+    width: 0px;
+    height: 0px;
+    display: block;
+    border-bottom: 4px solid transparent;
+    transition: .9s;
+}
+
+header .navegacao-primaria li a:hover::after {
+    width: 100%;
+    height: 0px;
+    padding: 0px;
+    border-bottom: 4px solid #0dcaec;
+}
+
+/* Dowload cv */
+/*ERIK DIAS DE SOUZA
+RU: 414884*/
+.section-div {
+    animation: inicializar .7s forwards;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items:center;
+    gap: 60px;
+    padding: 40px;
+}
+
+.section-div div {
+    margin-top: 120px;
+    align-self: start;
+    display: grid;
+    gap: 30px;
+}
+
+.section-div div h2 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.section-div p {
+    font-family: 'Poppins';
+    font-weight: 200;
+    color: #f7f7f7;
+}
+.section-div div a{
+    justify-self: start;
+    color: #0dcaec;
+    padding: 15px 40px;
+    border-radius: 5px;
+    border: 2px solid #0dcaec;
+}
+
+.section-div img {
+    max-width: 110%;
+}
+
+.digitando::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .5s infinite;
+}
+
+@keyframes pisca {
+    from {
+        opacity: 1;
+
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+@keyframes inicializar {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity:1;
+        trasnform: translate3d(0, 0, 0);
+    }
+}
+
+/* ARÉA SOBRE MIM*/
+/*ERIK DIAS DE SOUZA
+RU: 414884*/
+
+main {
+    background-color: #111;
+    color: rgb(255, 255, 255)
+}
+
+main .sobre {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.sobre_titulo {
+    margin: 30px 0;
+    grid-column: 1/-1;
+    text-align: center;
+    color: #0dcaec;
+}
+
+.sobre_titulo h1{
+    font-size: 2.5rem;
+    color: #0dcaec;
+    margin-bottom: 15px;
+    font-family:'berkshire swash';
+}
+
+.sobre_titulo p {
+    color: #f9feff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.sobre_titulo div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.sobre_titulo span{
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #0dcaec;
+}
+
+.sobre img {
+    animation: ladoSecao .5s ease-in-out forwards;
+    cursor: pointer;
+    grid-row: 2;
+    max-width: 100%;
+    border-radius: 4px;
+    filter: blur(0);
+}
+
+.sobre img:hover {
+    transition: .5s ease-in;
+    filter: blur(1px) ;
+}
+
+.conteudo {
+    animation: sobeSecao .6s ease-in-out forwards;
+    grid-column: 2/-1;
+    display: grid;
+    color: #707070;
+    grid-template-columns: 1fr 1fr ;
+}
+
+.sobre_texto {
+    display : grid;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr  ;
+}
+
+.sobre_texto h1 {
+    font-size: 2.3rem;
+    color: #ffffff;
+    grid-column: 1/-1;
+}
+
+.sobre_texto h1::after {
+    background-color: #fffffffd;
+    height: 6px;
+    width: 60px;
+    margin:20px;
+    content: '';
+    display: block;
+    border-radius:  5px;
+}
+
+.sobre_texto p {
+    font-size: 1.3rem;
+    grid-row: 2;
+    grid-column: 1/-1;
+}
+
+.sobre_info {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/-1;
+    gap: 15px;
+    align-items: center;
+}
+
+.sobre_info i {
+    color: #0dcaec;
+    display: inline-block;
+    padding-right: 15px;
+    font-size: 1.5rem;
+}
+
+sobre.info p {
+    font-size: .9rem;
+}
+
+@keyframes sobeSecao {
+    from {
+        transition: 5s;
+        transform: translate3d(60px, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes ladoSecao {
+    from {
+        transition: 5s;
+        transform: translate3d(-60px, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* RESPAMSIVO WEB*/
+/*ERIK DIAS DE SOUZA
+RU: 414884*/
+@media (max-width: 992px) {
+    .section-div img {
+        display: none;
+    }
+
+
+    .section-div {
+        background-image: url(eu.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    header  {
+        justify-content: space-between;
+        padding: 30px 70px;
+    }
+    header .navegacao-primaria {
+        display: none;
+    }
+
+    header i {
+        color: #0dcaec;
+        font-size: 3rem;
+    }
+
+    header .navegacao-primaria.ativado {
+        background: linear-gradient(rgba(43,42,42, 0.176), rgba(46,46,46, 0.724));
+        position : absolute;
+        display: grid;
+        top: 80px;
+        color: white;
+        z-index: 1;
+        padding: 30px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        border-radius: 0 0 4px 4px;
+        right: 20px;
+        animation: sobeSecao .8s ease-in-out forwards;
+    }
+}
+
+@media(max-width: 992px) {
+    .sobre img {
+        grid-column: 1/-1;
+        justify-self: center;
+    }
+
+    .conteudo {
+        grid-column: 1/-1;
+    }
+}
+
+/* SEÇÃO DE SERVIÇOS*/
+/*ERIK DIAS DE SOUZA
+RU: 414884*/
+.service {
+    margin-top: -30px;
+    padding: 60px;
+    background-color: #151515;
+}
+
+.meus_serviços{
+    padding: 60px;
+    color: white;
+}
+
+.meus_serviços ul {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.meus_serviços ul li {
+    cursor: pointer;
+    border-radius: 6px;
+    position: relative;
+    padding: 10px;
+    display: grid;
+    gap: 30px;
+    text-align: center;
+    max-width: 300px;
+    align-content: center;
+    height: 300px;
+    background-color: #222;
+}
+
+.meus_serviços ul li i {
+    font-size:2.7rem;
+    color: #0dcaec;
+}
+
+.meus_serviços ul li h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: 'poppins';
+    font-weight: 500;
+}
+
+.meus_serviços ul li p {
+    color: #707070;
+    font-size: 1.1rem;
+}
+
+.meus_serviços li::before {
+    content: '';
+    transition: .5s ease-in-out;
+    border-radius: 6px;
+    width: 0px;
+    height: 0px;
+    position: obsolute;
+    top: -2px;
+    right: -2px;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.meus_serviços li::after {
+    content: '';
+    transition: .5s ease-in-out;
+    border-radius: 6px;
+    width: 0px;
+    height: 0px;
+    position: obsolute;
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+.meus_serviços li:hover::before {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid  #0dcaec;
+    border-right: 2px solid  #0dcaec;
+}
+
+.meus_serviços li:hover::after {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid  #0dcaec;
+    border-right: 2px solid  #0dcaec;
+}
+
+/*EXPERIENCIAS*/
+/*ERIK DIAS DE SOUZA
+RU: 414884*/
+.Meu_Resumo {
+    color: #ffffff;
+}
+
+.resumo_simples {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 10px;
+    align-items: start;
+}
+
+.resumo_simples h2 {
+    font-family:'Poppins';
+    font-size: 1.5rem;
+    background-color: #0dcaec;
+    justify-self: start;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.resumo_simples h2 i {
+    margin-right: 10px;
+}
+
+.experiencia {
+    margin-bottom: 30px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.education {
+    margin-bottom: 30px;
+    grid-column: 2;
+    grid-row:1;
+}
+
+.experience_content ul {
+    color:#0dcaec;
+    gap: 10px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 20px;
+    justify-content: center;
+}
+ 
+.resumo_simples .experience_content div {
+    background-color: #222;
+    animation: ladoSecao .5s ease-in-out forwards;
+    padding: 40px;
+    position: relative;
+}
+
+.resumo_simples .experience_content div.ativo{
+    display: block;
+}
+
+.resumo_simples .experience_content div::before {
+    content: '';
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #222;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    display: inline-block;
+}
+
+.resumo_simples .experience_content div span {
+    color:#0dcaec;
+    font-family: "Poppins";
+    font-weight: bold;
+}
+
+.resumo_simples .experience_content div h3 {
+    font-family:'Poppins';
+    margin: 10px 0;
+}
+.resumo_simples .experience_content div p {
+    color: #707070;
+    font-size: 1.1rem;
+}
+
+.experience_content ul li.ativo {
+    color: #3e3d3d;
+}
+
+/* MEUS CURSOS */
+/*ERIK DIAS DE SOUZA
+RU: 414884*/
+
+.resumo_simples .education_content div {
+    background-color: #222;
+    padding: 40px;
+    animation: ladoSecao .5s ease-in-out forwards;
+    position: relative;
+}
+.education_content ul{
+    color:#0dcaec;
+    gap: 10px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.resumo_simples .education_content div::before{
+    content: '';
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #222;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    display: inline-block;
+}
+.resumo_simples .education_content div span {
+    color:#0dcaec;
+    font-family: "Poppins";
+    font-weight: bold;
+}
+
+.resumo_simples .education_content div h3 {
+    font-family:'Poppins';
+    margin: 10px 0;
+}
+.resumo_simples .education_content  div p {
+    color: #707070;
+    font-size: 1.1rem;
+}
+
+.education_content ul li.ativo {
+    color: #3e3d3d;
+}
+.resumo_simples .education_content div.ativo{
+    display: block;
+}
+
+/* CURSOS E SKILL*/
+/*ERIK DIAS DE SOUZA
+RU: 414884*/
+.cursos{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: start;
+    padding: 30px;
+    justify-content: center;
+}
+
+.my_skill{
+    display: grid;
+}
+
+.my_skill h2 {
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: #0dcaec;
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    margin-bottom: 30px;
+    justify-self: start;
+}
+.my_skill h2 i {
+    padding-right: 10px;
+}
+
+.skill_content {
+    font-size: 1.5rem;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.skill_content h3 {
+    font-size: 1.5rem;
+}
+.skill_content ul {
+    display: flex;
+}
+/* FUN FACTS*/
+
+.funfacts{
+    grid-column: 3/-1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.funfacts h2{
+    grid-column: 1/-1;
+    padding: 10px 30px;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    background-color: #0dcaec;
+    margin-bottom: 30px;
+    justify-self: start;
+}
+
+.funfacts h2 i {
+    padding-right: 10px;
+}
+.funfacts ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.funfacts ul li {
+    background-color: #222;
+    border: 3px solid #222;
+    display:grid;
+    grid-template-columns: auto 1fr;
+    align-self: start;
+    width: 200px;
+    height: 100px;
+}
+
+.funfacts ul li i {
+    grid-row: 1/3;
+    margin: auto;
+    padding: 20px;
+    font-size: 2rem;
+    color: #0dcaec;
+    border-right: 2px solid #0dcaec
+}
+
+.funfacts ul li span {
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.funfacts ul li p {
+    padding-left: 10 px;
+    color: #707070;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
+
+@media (max-width: 1089px){
+    .resume_generico .experience_cotent,
+    .education_content {
+        justify-self: center;
+        grid-column: 1/1;
+    }
+
+    .resume_generico .education {
+        grid-column: 1/-1;
+        grid-row: 3;
+        justify-self: center;
+        margin: 30px 0;
+    }
+
+    .resume_generico .experience {
+        grid-column: 1/-1;
+        grid-row: 1;
+        justify-self: center;
+    }
+
+    .cursos {
+        grid-template-columns: 1fr;
+    }
+
+    .cursos .funfacts h2 {
+        justify-self: center;
+    }
+
+    .cursos .funfacts {
+        margin-bottom: 30px;
+        text-align: center;
+        justify-self: center;
+        grid-column: 1/-1;
+    }
+
+    .cursos .my_skill h2 {
+        justify-self: center;
+    }
+
+    .cursos .my_skill {
+        text-align: center;
+        grid-template-columns: 1fr;
+        justify-self: center;
+        grid-column: 1/1;
+    }
+}
+.projects {
+    padding: 30px;
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+    background-color: #151515;
+}
+
+.projects ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.projects_models ul li {
+    cursor:pointer;
+    font-family:'Poppins';
+    background-color: #222;
+    border: 1px solid #333;
+    padding: 6px 20px;
+    color: #707070;
+}
+
+.projects_armazenamento ul {
+    display: grid;
+    margin-top: 60px;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.projects_armazenamento ul li {
+    max-width: 100%;
+    height: 100%;
+}
+
+.projects_armazenamento ul li.ativo{
+    display: block;
+    animation: animationImagemButton .2s ease-in-out forwards;
+}
+
+.projects_armazenamento ul li img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.projects a {
+    background-color: #222;
+    text-decoration: none;
+    justify-self: center;
+    padding: 20px 40px;
+    border: 1pc solid #333;
+    color: #707070;
+}
+
+@keyframes animationImagemButton{
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -90px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* FOOTER*/
+
+footer {
+    background-color: #000000;
+    padding: 30px;
+}
+
+.footer_sociais {
+    display:flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    color: #f7f7f7;
+}
+
+.footer_sociais li {
+    background-color: #212020;
+    border-radius: 50%;
+    border:1px solid #333;
+}
+
+.footer_sociais li i {
+    padding: 30px;
+    font-size: 1.5rem;
+    color: #f7f7f7;
+}
+
+.footer_sociais li::hover {
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    background-color: #3e3d3d;
+}
+
+.footer_sociais::before {
+    content:'';
+    height: 5px;
+    position: absolute;
+    width: 200px;
+    bottom: -30px;
+    background-color: #222;
+}
+
+footer .footer_comercial {
+    text-align: center;
+    color: #ffff;
+    margin: 90px auto;
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+}
