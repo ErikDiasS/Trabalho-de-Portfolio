@@ -351,12 +351,12 @@ RU: 414884*/
     background-color: #151515;
 }
 
-.meus_serviços{
+.formacao{
     padding: 60px;
     color: white;
 }
 
-.meus_serviços ul {
+.formacao ul {
     display: flex;
     flex-wrap:wrap;
     gap: 20px;
@@ -364,7 +364,7 @@ RU: 414884*/
     justify-content: center;
 }
 
-.meus_serviços ul li {
+.formacao ul li {
     cursor: pointer;
     border-radius: 6px;
     position: relative;
@@ -378,24 +378,24 @@ RU: 414884*/
     background-color: #222;
 }
 
-.meus_serviços ul li i {
+.formacao ul li i {
     font-size:2.7rem;
     color: #0dcaec;
 }
 
-.meus_serviços ul li h3 {
+.formacao ul li h3 {
     color: #fff;
     font-size: 1.6rem;
     font-family: 'poppins';
     font-weight: 500;
 }
 
-.meus_serviços ul li p {
+.formacao ul li p {
     color: #707070;
     font-size: 1.1rem;
 }
 
-.meus_serviços li::before {
+.formacao li::before {
     content: '';
     transition: .5s ease-in-out;
     border-radius: 6px;
@@ -408,7 +408,7 @@ RU: 414884*/
     border-right: 2px solid transparent;
 }
 
-.meus_serviços li::after {
+.formacao li::after {
     content: '';
     transition: .5s ease-in-out;
     border-radius: 6px;
@@ -421,14 +421,14 @@ RU: 414884*/
     border-left: 2px solid transparent;
 }
 
-.meus_serviços li:hover::before {
+.formacao li:hover::before {
     width: 100%;
     height: 100%;
     border-top: 2px solid  #0dcaec;
     border-right: 2px solid  #0dcaec;
 }
 
-.meus_serviços li:hover::after {
+.formacao li:hover::after {
     width: 100%;
     height: 100%;
     border-top: 2px solid  #0dcaec;
@@ -445,7 +445,7 @@ RU: 414884*/
 .resumo_simples {
     padding: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-content: center;
     gap: 10px;
     align-items: start;
@@ -529,51 +529,7 @@ RU: 414884*/
 /*ERIK DIAS DE SOUZA
 RU: 414884*/
 
-.resumo_simples .education_content div {
-    background-color: #222;
-    padding: 40px;
-    animation: ladoSecao .5s ease-in-out forwards;
-    position: relative;
-}
-.education_content ul{
-    color:#0dcaec;
-    gap: 10px;
-    display: flex;
-    cursor: pointer;
-    margin-top: 20px;
-    justify-content: center;
-}
 
-.resumo_simples .education_content div::before{
-    content: '';
-    border-right: 30px solid transparent;
-    border-bottom: 30px solid #222;
-    position: absolute;
-    top: -20px;
-    left: 30px;
-    display: inline-block;
-}
-.resumo_simples .education_content div span {
-    color:#0dcaec;
-    font-family: "Poppins";
-    font-weight: bold;
-}
-
-.resumo_simples .education_content div h3 {
-    font-family:'Poppins';
-    margin: 10px 0;
-}
-.resumo_simples .education_content  div p {
-    color: #707070;
-    font-size: 1.1rem;
-}
-
-.education_content ul li.ativo {
-    color: #3e3d3d;
-}
-.resumo_simples .education_content div.ativo{
-    display: block;
-}
 
 /* CURSOS E SKILL*/
 /*ERIK DIAS DE SOUZA
@@ -824,6 +780,7 @@ footer {
     padding: 30px;
     font-size: 1.5rem;
     color: #f7f7f7;
+    cursor: pointer;
 }
 
 .footer_sociais li::hover {
