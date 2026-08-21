@@ -213,7 +213,7 @@ main .sobre {
     animation: sobeSecao .6s ease-in-out forwards;
     grid-column: 2/-1;
     display: grid;
-    color: #707070;
+    color: #b1b0b0;
     grid-template-columns: 1fr 1fr ;
 }
 
@@ -260,8 +260,11 @@ main .sobre {
     padding-right: 15px;
     font-size: 1.5rem;
 }
-
-sobre.info p {
+.sobre_info a {
+    color: #0dcaec;
+    text-decoration: none;
+}
+sobre_info p {
     font-size: .9rem;
 }
 
@@ -391,7 +394,7 @@ RU: 414884*/
 }
 
 .formacao ul li p {
-    color: #707070;
+    color: #b1b0b0;
     font-size: 1.1rem;
 }
 
@@ -517,7 +520,7 @@ RU: 414884*/
     margin: 10px 0;
 }
 .resumo_simples .experience_content div p {
-    color: #707070;
+    color: #b1b0b0;
     font-size: 1.1rem;
 }
 
@@ -633,7 +636,7 @@ RU: 414884*/
 
 .funfacts ul li p {
     padding-left: 10 px;
-    color: #707070;
+    color: #b1b0b0;
     font-weight: bold;
     font-family: 'Poppins';
 }
@@ -704,7 +707,7 @@ RU: 414884*/
     background-color: #222;
     border: 1px solid #333;
     padding: 6px 20px;
-    color: #707070;
+    color: #b1b0b0;
 }
 
 .projects_armazenamento ul {
@@ -738,7 +741,7 @@ RU: 414884*/
     justify-self: center;
     padding: 20px 40px;
     border: 1pc solid #333;
-    color: #707070;
+    color: #b1b0b0;
 }
 
 @keyframes animationImagemButton{
