@@ -97,61 +97,35 @@ buttonGeral.forEach ((item,index)=>{
 
 
 
-function showLista(lista, buttom = "all"){
-    lista.forEach((item)=>{
-        item.classList.remove('ativo');
-    })
-    if(buttom == 'design'){
-        lista[0].classList.add('ativo');
-        lista[1].classList.add('ativo');
-    }
+function showLista(lista, categoria = "all") {
+    lista.forEach((item) => {
+        item.classList.remove("ativo");
 
-    if(buttom == 'graphic'){
-        lista[2].classList.add('ativo');
-        lista[3].classList.add('ativo');
-    }
-
-    if(buttom == 'website'){
-        lista[4].classList.add('ativo');
-        lista[5].classList.add('ativo');
-        lista[6].classList.add('ativo');
-        lista[7].classList.add('ativo');
-    }
-
-    if(buttom == 'all'){
-        lista[0].classList.add('ativo');
-        lista[1].classList.add('ativo');
-        lista[2].classList.add('ativo');
-        lista[3].classList.add('ativo');
-        lista[4].classList.add('ativo');
-        lista[5].classList.add('ativo');
-        lista[6].classList.add('ativo');
-        lista[7].classList.add('ativo');
-        lista[8].classList.add('ativo');
-    }
+        if (categoria === "all" || item.classList.contains(categoria)) {
+            item.classList.add("ativo");
+        }
+    });
 }
 
 
-buttonGeral.forEach((item)=>{
-    item.addEventListener('click', (e)=>{
+buttonGeral.forEach((item) => {
+    item.addEventListener("click", (e) => {
         let currentButton = e.target;
-        if(currentButton.classList.contains('all')){
-            showLista(listaALL);
-        }
-        if(currentButton.classList.contains('design')){
-            showLista(listaALL, "design")
+
+        if (currentButton.classList.contains("all")) {
+            showLista(listaALL, "all");
         }
 
-        if(currentButton.classList.contains('graphic')){
-            showLista(listaALL, "graphic")
+        if (currentButton.classList.contains("python")) {
+            showLista(listaALL, "python");
         }
 
-        if(currentButton.classList.contains('website')){
-            showLista(listaALL, "website")
+        if (currentButton.classList.contains("web")) {
+            showLista(listaALL, "web");
         }
 
-        if(currentButton.classList.contains('all')){
-            showLista(listaALL, "all")
+        if (currentButton.classList.contains("estudos")) {
+            showLista(listaALL, "estudos");
         }
-    })
-})
+    });
+});
