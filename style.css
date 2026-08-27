@@ -110,6 +110,7 @@ RU: 414884*/
 
 .section-div img {
     max-width: 110%;
+    height: auto;
 }
 
 .digitando::after {
@@ -138,7 +139,7 @@ RU: 414884*/
 
     to {
         opacity:1;
-        trasnform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
@@ -404,7 +405,7 @@ RU: 414884*/
     border-radius: 6px;
     width: 0px;
     height: 0px;
-    position: obsolute;
+    position: absolute;
     top: -2px;
     right: -2px;
     border-top: 2px solid transparent;
@@ -729,7 +730,7 @@ RU: 414884*/
     min-height: 430px;
     background-color: #222;
     border-radius: 4px;
-    overflow: visiblwe;
+    overflow: visible;
     display: flex;
     flex-direction: column;
 }
@@ -810,7 +811,7 @@ RU: 414884*/
     text-decoration: none;
     justify-self: center;
     padding: 20px 40px;
-    border: 1pc solid #333;
+    border: 1px solid #333;
     color: #b1b0b0;
 }
 
@@ -878,3 +879,266 @@ footer .footer_comercial {
     font-size: 1.5rem;
     font-family: 'Poppins';
 
+/* ============================= */
+/* RESPONSIVIDADE PARA CELULAR */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* HEADER */
+
+    header {
+        padding: 20px;
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header i {
+        font-size: 2rem;
+    }
+
+
+    /* APRESENTAÇÃO */
+
+    .section-div {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 20px;
+        min-height: auto;
+    }
+
+    .section-div div {
+        margin-top: 40px;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .section-div div h2 {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+
+    .section-div p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .section-div div a {
+        padding: 12px 25px;
+    }
+
+
+    /* SOBRE MIM */
+
+    main .sobre {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .sobre_titulo h1 {
+        font-size: 2rem;
+    }
+
+    .sobre_titulo p {
+        font-size: 1.1rem;
+    }
+
+    .sobre img {
+        grid-column: 1;
+        width: 100%;
+        max-width: 400px;
+        justify-self: center;
+    }
+
+    .conteudo {
+        grid-column: 1;
+        grid-template-columns: 1fr;
+    }
+
+    .sobre_texto h1 {
+        font-size: 1.8rem;
+    }
+
+    .sobre_texto p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .sobre_info {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* FORMAÇÃO */
+
+    .formacao {
+        padding: 40px 20px;
+    }
+
+    .formacao ul {
+        flex-direction: column;
+    }
+
+    .formacao ul li {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* EXPERIÊNCIA */
+
+    .resumo_simples {
+        padding: 20px;
+    }
+
+    .resumo_simples h2 {
+        font-size: 1.2rem;
+    }
+
+    .resumo_simples .experience_content div {
+        padding: 25px 20px;
+    }
+
+    .resumo_simples .experience_content div p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+
+    /* CURSOS E SKILLS */
+
+    .cursos {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+
+    .skill_content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .funfacts {
+        grid-template-columns: 1fr;
+    }
+
+    .funfacts ul {
+        grid-template-columns: 1fr;
+    }
+
+    .funfacts ul li {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* PROJETOS */
+
+    .projects {
+        padding: 30px 20px;
+    }
+
+    .projects ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .projects_armazenamento ul {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+    }
+
+    .projects_armazenamento ul li {
+        min-height: auto;
+        width: 100%;
+    }
+
+    .projects_armazenamento ul li img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .project_info {
+        padding: 20px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 30px 20px;
+    }
+
+    .footer_sociais {
+        gap: 15px;
+    }
+
+    .footer_sociais li i {
+        padding: 20px;
+    }
+}
+
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .section-div {
+        padding: 25px 15px;
+    }
+
+    .section-div div h2 {
+        font-size: 1.3rem;
+    }
+
+    .section-div p {
+        font-size: 0.95rem;
+    }
+
+    .sobre_titulo h1 {
+        font-size: 1.7rem;
+    }
+
+    .sobre_titulo p {
+        font-size: 1rem;
+    }
+
+    .sobre_texto h1 {
+        font-size: 1.5rem;
+    }
+
+    .formacao {
+        padding: 30px 15px;
+    }
+
+    .formacao ul li {
+        max-width: 100%;
+    }
+
+    .projects {
+        padding: 25px 15px;
+    }
+
+    .projects_models ul li {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+}
