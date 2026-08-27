@@ -729,7 +729,7 @@ RU: 414884*/
     min-height: 430px;
     background-color: #222;
     border-radius: 4px;
-    overflow: hidden;
+    overflow: visiblwe;
     display: flex;
     flex-direction: column;
 }
@@ -743,7 +743,9 @@ RU: 414884*/
 .projects_armazenamento ul li img {
     width: 100%;
     height: auto;
+    object-fit: 100%;
     display: block;
+    background-color: #111;
     border-radius: 0;
 }
 .project_info {
@@ -875,4 +877,4 @@ footer .footer_comercial {
     margin: 90px auto;
     font-size: 1.5rem;
     font-family: 'Poppins';
-}
+
