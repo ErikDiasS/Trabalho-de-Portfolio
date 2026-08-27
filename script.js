@@ -2,22 +2,35 @@ function escrevendoLetra() {
 
 }
 
-function escrevendoLetra(){
-function ativarletra(elemento){
-    const arrTexto = elemento.innerHTML.split('');
-    elemento.innerHTML = '';
-    arrTexto.forEach((letra, i)=>{
-        setTimeout(()=>{
-            elemento.innerHTML += letra;
-        }, 75 * i);
-    });
-} 
-
+function escrevendoLetra() {
     const titulo = document.querySelector('.digitando');
-    ativarletra(titulo);
-}
-escrevendoLetra()
+    const texto = titulo.innerHTML;
 
+    function ativarLetra() {
+        titulo.innerHTML = '';
+
+        texto.split('').forEach((letra, i) => {
+            setTimeout(() => {
+                titulo.innerHTML += letra;
+            }, 75 * i);
+        });
+
+        // Espera terminar de escrever + 1,5 segundo
+        setTimeout(() => {
+            titulo.innerHTML = '';
+
+            // Espera 500ms e começa novamente
+            setTimeout(() => {
+                ativarLetra();
+            }, 500);
+
+        }, 75 * texto.length + 1500);
+    }
+
+    ativarLetra();
+}
+
+escrevendoLetra();
 
 
 function menuMobol() {
